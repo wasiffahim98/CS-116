@@ -1,1 +1,6 @@
-Folder contains the source code for my unit conversion 
+This program is an Unit Converter. It converts from seconds to hours and minutes,
+Fahrenheit to Celsius and Celsius to Fahrenheit. The user has the option to select
+which unit types they want to be converted. Each selection calls in a function that
+has the conversion formulas in placed.
+
+Unit Conversion.cpp
