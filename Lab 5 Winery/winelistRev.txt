@@ -1,0 +1,8 @@
+Stags Leap Artemis Cabernet;Red;2013;92;65;Stags
+Silver Oak Cabernet;Red;2011;91;110;Silver Oak
+Jospeh Phelps Insignia;Red;2013;97;240;Joseph
+Duckhorn Cabernet;Red;2013;93;72;Duckhorn
+Alpha Omega Chardonnay;White;2012;92;69.99;Alpha Omega
+Grgich Chardonnay;White;2013;90;43;Grgich
+Stags Leap Chardonnay;White;2014;90;30;Stags
+Pahlmayer;White;2013;93;72.99;Pahlmayer
