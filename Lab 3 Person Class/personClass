@@ -1,0 +1,8 @@
+/*
+* This program uses private and public classes to
+* store name and age of a person into an array of
+* up to 30. After the information is stored, the user
+* could select the option to print out all the data
+* that has been entered in. After that, the user could
+* press the exit button to exit out of the program.
+*/
