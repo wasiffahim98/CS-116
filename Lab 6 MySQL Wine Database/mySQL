@@ -1,1 +1,9 @@
-This program reads from a mySql database.
+/*This program reads the wine information that is stored in the SQL 
+ * database and stores them into vectors. Once it is in the vectors, the
+ * users have multiple options with what they could do with the wine 
+ * information. User could find wines between a price range, between a 
+ * rating range, sort it by price and sort by rating. This can help the 
+ * wine users filter out the wines based on either price or rating. It 
+ * displays all the wines in an organized table-like layout that has 
+ * lined-up columns for every desired wine information.
+*/
