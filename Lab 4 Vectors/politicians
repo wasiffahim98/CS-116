@@ -1,0 +1,10 @@
+/*
+*  This program reads through a list of names in a textfile.
+*  From the textfile, all the user informations are stored in
+*  vectors. The user has the option to search the last name
+*  of the person, and if the person is found from the list,
+*  then all of his/her info will print. The user also has the
+*  second option to simply print all the people's info that
+*  is stored on the textfile. After that, the user could quit
+*  the program with the last option.
+*/
