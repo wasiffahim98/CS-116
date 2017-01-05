@@ -1,0 +1,14 @@
+/*  This program reads through two files
+ *  of winelist and winery files. After
+ *  reading the files, it stores the
+ *  information from the files into
+ *  individual vectors. After it is
+ *  stored, the user has the option to
+ *  find wines through price ranges and
+ *  score ranges. The program could also
+ *  sort the wines by price and score. If none
+ *  of those work for the user, they could always
+ *  just search for the specific wine type they
+ *  are looking for. This application can come in
+ *  handy for the holiday seasons.
+ */
