@@ -1,0 +1,348 @@
+\documentstyle{article}
+\begin{document}
+
+\ifx\sevenrm\undefined
+  \font\sevenrm=cmr7 scaled \magstep0
+\fi
+
+\newread\MyStyle
+\openin\MyStyle=src2latex.s2t
+\ifeof\MyStyle
+  \closein\MyStyle
+\else
+  \input src2latex.s2t
+  \closein\MyStyle
+\fi
+
+\ifx\gtfam\undefined
+  \ifx\dm\undefined
+    \ifx\tendm\undefined
+      \def\mc{\null}
+    \else
+      \def\mc{\tendm}
+    \fi
+  \else
+    \def\mc{\dm}
+  \fi
+  \ifx\dg\undefined
+    \ifx\tendg\undefined
+      \def\gt{\null}
+    \else
+      \def\gt{\tendg}
+    \fi
+  \else
+    \def\gt{\dg}
+  \fi
+\fi
+\ifx\sc\undefined
+  \def\sc{\null}
+\fi
+
+\tt\mc 
+
+\noindent
+\tt\mc {\tt /}{\tt *}
+
+\noindent
+\hfill
+
+\noindent
+http:{\tt /}{\tt /}www.codingfriends.com{\tt /}index.php{\tt /}2010{\tt /}02{\tt /}17{\tt /}mysql{\tt -}connection{\tt -}example{\tt /}
+
+\noindent
+\hfill
+
+\noindent
+To\kern0.500em compile\kern0.500em up\kern0.500em this\kern0.500em program\kern0.500em you\kern0.500em will\kern0.500em need\kern0.500em to\kern0.500em link\kern0.500em to\kern0.500em the\kern0.500em mysql\kern0.500em libraries\kern0.500em and\kern0.500em headers\kern0.500em that\kern0.500em are\kern0.500em used\kern0.500em within\kern0.500em the\kern0.500em program,\kern0.500em e.g.\kern0.500em mysql.h\kern0.500em at\kern0.500em the\kern0.500em top\kern0.500em of\kern0.500em the\kern0.500em program.\kern0.500em To\kern0.500em gain\kern0.500em access\kern0.500em to\kern0.500em these,\kern0.500em there\kern0.500em is\kern0.500em a\kern0.500em nice\kern0.500em mysql{\tt\_\kern.141em}config\kern0.500em (you\kern0.500em may\kern0.500em need\kern0.500em to\kern0.500em install\kern0.500em it\kern0.500em via\kern0.500em your\kern0.500em package\kern0.500em manager\kern0.500em system\kern0.500em if\kern0.500em you\kern0.500em do\kern0.500em not\kern0.500em have\kern0.500em it\kern0.500em already).
+
+\noindent
+\hfill
+
+\noindent
+Here\kern0.500em are\kern0.500em my\kern0.500em outputs\kern0.500em of\kern0.500em what\kern0.500em is\kern0.500em required\kern0.500em on\kern0.500em the\kern0.500em command\kern0.500em line\kern0.500em for\kern0.500em the\kern0.500em g++\kern0.500em compiler
+
+\noindent
+\hfill
+
+\noindent
+\hfill
+
+\noindent
+\hfill
+
+\noindent
+g++\kern0.500em {\tt -}I{\tt /}usr{\tt /}include{\tt /}mysql\kern0.500em winedb.cpp\kern0.500em {\tt -}o\kern0.500em winedb\kern0.500em {\tt -}L{\tt /}usr{\tt /}lib{\tt /}mysql\kern0.500em {\tt -}lmysqlclient
+
+\noindent
+\hfill
+
+\noindent
+\hfill
+
+\noindent
+.{\tt /}windb\kern0.500em {\tt "}select\kern0.500em {\tt *}\kern0.500em from\kern0.500em wineInfo\kern0.500em where\kern0.500em price\kern0.500em {\tt >}\kern0.500em 100{\tt "}
+
+\noindent
+\hfill
+
+\noindent
+{\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}\hfill
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt <}mysql.h{\tt >}
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt <}stdio.h{\tt >}
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt <}stdlib.h{\tt >}
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt <}iostream{\tt >}
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt <}iomanip{\tt >}
+
+\noindent
+{}{\tt\#}include{\tt\mc \kern0.500em}{\tt "}dbconnect.h{\tt "}
+
+\noindent
+{}\hfill
+
+\noindent
+{}using{\tt\mc \kern0.500em}namespace{\tt\mc \kern0.500em}std;
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}\tt\mc {\tt /}{\tt *}
+
+\noindent
+\kern0.500em argv[1]\kern0.500em {\tt -}\kern0.500em put\kern0.500em sql\kern0.500em command\kern0.500em in\kern0.500em argv[1],\kern0.500em otherwise,\kern0.500em just\kern0.500em 
+
+\noindent
+\kern0.500em use\kern0.500em sql\kern0.500em {\tt "}show\kern0.500em tables{\tt "}
+
+\noindent
+{\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}int{\tt\mc \kern0.500em}main(int{\tt\mc \kern0.500em}argc,{\tt\mc \kern0.500em}char{\tt *}{\tt\mc \kern0.500em}argv[])
+
+\noindent
+{}{\tt\char'173}
+
+\noindent
+{}{\tt\mc \kern1.000em}MYSQL{\tt\mc \kern0.500em}{\tt *}conn;{\tt\mc \kern1.000em}{\tt\mc \kern4.000em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em connection
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}MYSQL{\tt\_\kern.141em}RES{\tt\mc \kern0.500em}{\tt *}res;{\tt\mc \kern3.500em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em results
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}MYSQL{\tt\_\kern.141em}ROW{\tt\mc \kern0.500em}row;{\tt\mc \kern4.000em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em results\kern0.500em row\kern0.500em (line\kern0.500em by\kern0.500em line)
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern1.000em}struct{\tt\mc \kern0.500em}connection{\tt\_\kern.141em}details{\tt\mc \kern0.500em}mysqlD;
+
+\noindent
+{}{\tt\mc \kern1.000em}mysqlD.server{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}localhost{\tt "};{\tt\mc \kern1.000em}\rm\mc {\tt /}{\tt /}\kern0.500em where\kern0.500em the\kern0.500em mysql\kern0.500em database\kern0.500em is
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}mysqlD.user{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}root{\tt "};{\tt\mc \kern0.500em}{\tt\mc \kern4.000em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em root\kern0.500em user\kern0.500em of\kern0.500em mysql{\tt\mc \kern3.500em}
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}mysqlD.password{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}password{\tt "};{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em password\kern0.500em of\kern0.500em the\kern0.500em root\kern0.500em user\kern0.500em in\kern0.500em mysql
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}mysqlD.database{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}mysql{\tt "};{\tt\mc \kern2.000em}\rm\mc {\tt /}{\tt /}\kern0.500em the\kern0.500em databse\kern0.500em to\kern0.500em pick
+
+\noindent
+\tt\mc {\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern1.000em}\tt\mc {\tt /}{\tt /}\kern0.500em connect\kern0.500em to\kern0.500em the\kern0.500em mysql\kern0.500em database
+
+\noindent
+\tt\mc {\tt\mc \kern1.000em}conn{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}mysql{\tt\_\kern.141em}connection{\tt\_\kern.141em}setup(mysqlD);
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern1.000em}res{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}mysql{\tt\_\kern.141em}perform{\tt\_\kern.141em}query(conn,{\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}use{\tt\mc \kern0.500em}wine{\tt "});
+
+\noindent
+{}\hfill
+
+\noindent
+{}{\tt\mc \kern1.000em}\tt\mc {\tt /}{\tt /}\kern0.500em assign\kern0.500em the\kern0.500em results\kern0.500em return\kern0.500em to\kern0.500em the\kern0.500em MYSQL{\tt\_\kern.141em}RES\kern0.500em pointer
+
+\noindent
+\tt\mc {\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern1.000em}char{\tt\mc \kern0.500em}{\tt *}sql{\tt\_\kern.141em}cmd;
+
+\noindent
+{}{\tt\mc \kern1.000em}sql{\tt\_\kern.141em}cmd{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(char{\tt\mc \kern0.500em}{\tt *}){\tt "}select{\tt\mc \kern0.500em}{\tt *}{\tt\mc \kern0.500em}from{\tt\mc \kern0.500em}wineInfo{\tt "};
+
+\noindent
+{}{\tt\mc \kern1.000em}
+
+\noindent
+{}{\tt\mc \kern2.500em}res{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}mysql{\tt\_\kern.141em}perform{\tt\_\kern.141em}query(conn,{\tt\mc \kern0.500em}sql{\tt\_\kern.141em}cmd);
+
+\noindent
+{}{\tt\mc \kern2.500em}\tt\mc {\tt /}{\tt *}
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em you\kern0.500em need\kern0.500em to\kern0.500em print\kern0.500em out\kern0.500em the\kern0.500em header.\kern1.000em Make\kern0.500em sure\kern0.500em it\kern0.500em it\kern0.500em 
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em nicely\kern0.500em formated\kern0.500em line\kern0.500em up.\kern1.000em Modify\kern0.500em the\kern0.500em cout\kern0.500em statement
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em below\kern0.500em so\kern0.500em the\kern0.500em header\kern0.500em is\kern0.500em nicely\kern0.500em line\kern0.500em up.\kern1.000em Hint:\kern0.500em use\kern0.500em left\kern0.500em and\kern0.500em setw
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em 
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em WineName\kern1.500em Vitange\kern1.000em Rating\kern1.000em Price\kern1.000em Type
+
+\noindent
+\kern3.000em {\tt *}\kern0.500em {\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}{\tt\mc \kern2.500em}cout{\tt\mc \kern0.500em}{\tt <}{\tt <}{\tt\mc \kern0.500em}{\tt "}Wine{\tt\mc \kern0.500em}Name{\tt "}
+
+\noindent
+{}{\tt\mc \kern11.500em}{\tt <}{\tt <}{\tt\mc \kern0.500em}{\tt "}Vintage{\tt "}
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}{\tt "}Rating{\tt "}
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}{\tt "}Price{\tt "}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}{\tt "}Type{\tt "}
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern0.500em}{\tt <}{\tt <}{\tt\mc \kern0.500em}endl;
+
+\noindent
+{}{\tt\mc \kern1.000em}
+
+\noindent
+{}{\tt\mc \kern1.000em}int{\tt\mc \kern0.500em}rating;
+
+\noindent
+{}{\tt\mc \kern1.000em}while{\tt\mc \kern0.500em}((row{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}mysql{\tt\_\kern.141em}fetch{\tt\_\kern.141em}row(res)){\tt\mc \kern0.500em}!=NULL)
+
+\noindent
+{}{\tt\mc \kern1.000em}{\tt\char'173}
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern1.000em}rating{\tt\mc \kern0.500em}={\tt\mc \kern0.500em}(int){\tt\mc \kern0.500em}row[2];
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}{\tt\mc \kern1.000em}\rm\mc {\tt /}{\tt *}\kern0.500em print\kern0.500em out\kern0.500em each\kern0.500em row\kern0.500em of\kern0.500em the\kern0.500em data\kern0.500em extracted\kern0.500em from
+
+\noindent
+{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}\kern1.500em {\tt *}\kern0.500em MySQL\kern0.500em database
+
+\noindent
+{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}\kern1.500em {\tt *}\kern0.500em Make\kern0.500em sure\kern0.500em the\kern0.500em output\kern0.500em is\kern0.500em line\kern0.500em up\kern0.500em with\kern0.500em the\kern0.500em header
+
+\noindent
+{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}\kern1.500em {\tt *}\kern0.500em Hint:\kern0.500em use\kern0.500em left\kern0.500em and\kern0.500em setw
+
+\noindent
+{\tt\mc \kern4.000em}{\tt\mc \kern4.000em}\kern1.500em {\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}\hfill
+
+\noindent
+{}{\tt\mc \kern4.000em}{\tt\mc \kern0.500em}cout{\tt\mc \kern0.500em}{\tt <}{\tt <}{\tt\mc \kern0.500em}row[0]{\tt\mc \kern1.500em}\rm\mc {\tt /}{\tt /}\kern0.500em coulumn\kern0.500em (field)\kern0.500em {\tt\#}1\kern0.500em {\tt -}\kern0.500em Wine\kern0.500em Name
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern1.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}row[1]{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em field\kern0.500em {\tt\#}2\kern0.500em {\tt -}\kern0.500em Vintage
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern1.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}rating{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em row[2]\kern0.500em {\tt -}\kern0.500em field\kern0.500em {\tt\#}3\kern0.500em {\tt -}\kern0.500em Rating
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern0.500em}{\tt <}{\tt <}{\tt\mc \kern0.500em}row[3]{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em field\kern0.500em {\tt\#}4\kern0.500em {\tt -}\kern0.500em Price
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern1.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}row[4]{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em field\kern0.500em {\tt\#}5\kern0.500em {\tt -}\kern0.500em Wine\kern0.500em type
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern1.000em}{\tt <}{\tt <}{\tt\mc \kern0.500em}endl;{\tt\mc \kern0.500em}\rm\mc {\tt /}{\tt /}\kern0.500em field\kern0.500em {\tt\#}7\kern0.500em {\tt -}\kern0.500em UPC
+
+\noindent
+\tt\mc {\tt\mc \kern4.000em}{\tt\mc \kern1.000em}
+
+\noindent
+{}\hfill
+
+\noindent
+{}{\tt\mc \kern3.000em}{\tt\char'175}
+
+\noindent
+{}{\tt\mc \kern1.000em}
+
+\noindent
+{}{\tt\mc \kern1.000em}\tt\mc {\tt /}{\tt *}\kern0.500em clean\kern0.500em up\kern0.500em the\kern0.500em database\kern0.500em result\kern0.500em set\kern0.500em {\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}{\tt\mc \kern1.000em}mysql{\tt\_\kern.141em}free{\tt\_\kern.141em}result(res);
+
+\noindent
+{}{\tt\mc \kern1.000em}\tt\mc {\tt /}{\tt *}\kern0.500em clean\kern0.500em up\kern0.500em the\kern0.500em database\kern0.500em link\kern0.500em {\tt *}{\tt /}
+\tt\mc 
+
+\noindent
+{}{\tt\mc \kern1.000em}mysql{\tt\_\kern.141em}close(conn);
+
+\noindent
+{}{\tt\mc \kern0.500em}
+
+\noindent
+{}{\tt\mc \kern1.000em}return{\tt\mc \kern0.500em}0;
+
+\noindent
+{}{\tt\char'175}
+
+\noindent
+{}
+
+\rm\mc
+
+\end{document}
