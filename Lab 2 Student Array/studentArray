@@ -1,0 +1,5 @@
+/*	
+ * 	The purpose of this program is to have the user enter in the names, date of births and grades for up to 30 students.
+ *	The program stores all the student information into an array. After the user is done entering in the students' infos,
+ *	the program will print out all of the students' infos and their course letter grade.   
+*/
